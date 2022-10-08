@@ -17,10 +17,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './services/login.service';
 import { AdDetailsComponent } from './ad-details/ad-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { DemoModalServiceStaticComponent } from './modals/registetered.modal';
 import { AdItemComponent } from './ad-item/ad-item.component';
 import { AdvertService } from './services/adverts.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,6 @@ import { AdvertService } from './services/adverts.service';
     HeaderComponent,
     FooterComponent,
     AdDetailsComponent,
-    DemoModalServiceStaticComponent,
     AdItemComponent,
   ],
   imports: [
@@ -43,14 +42,9 @@ import { AdvertService } from './services/adverts.service';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NgbModule,
   ],
-  providers: [
-    RegistrationService,
-    LoginService,
-    BsModalService,
-    BsModalRef,
-    AdvertService,
-  ],
+  providers: [RegistrationService, LoginService, AdvertService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

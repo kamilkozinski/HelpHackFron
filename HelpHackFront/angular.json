@@ -95,5 +95,7 @@
       }
     }
   },
-  "defaultProject": "HelpHackFront"
+  "cli": {
+    "analytics": false
+  }
 }
