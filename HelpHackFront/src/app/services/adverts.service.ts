@@ -24,7 +24,7 @@ export class AdvertService {
     new Advert(
       'Sed ex neque, vehicula eu dapibus vitae, sagittis luctus urna. Aenean ornare accumsan ipsum, et viverra urna consequat quis. Aliquam id hendrerit odio, quis blandit mauris. Donec eget tristique tortor, ut lacinia tortor. Nulla lacinia pulvinar augue, ut pharetra ligula lacinia ac. Aliquam vehicula mi interdum pulvinar ullamcorper. Vivamus at suscipit quam. Nullam vitae lorem nec ex semper pellentesque. Donec tincidunt arcu eu diam tristique, id blandit turpis ornare. Pellentesque fermentum, sem quis consectetur accumsan, libero mi sodales elit, in ullamcorper leo urna et nisi.',
       'Schronisko dla zwierząt w Wroclawiu',
-      'Pomoc zwierzakom',
+      'Pomoc starszym',
       this.formattedDate,
       'JanuszMilosnikZwierzat',
       'Active'
@@ -32,7 +32,7 @@ export class AdvertService {
     new Advert(
       'Sed ex neque, vehicula eu dapibus vitae, sagittis luctus urna. Aenean ornare accumsan ipsum, et viverra urna consequat quis. Aliquam id hendrerit odio, quis blandit mauris. Donec eget tristique tortor, ut lacinia tortor. Nulla lacinia pulvinar augue, ut pharetra ligula lacinia ac. Aliquam vehicula mi interdum pulvinar ullamcorper. Vivamus at suscipit quam. Nullam vitae lorem nec ex semper pellentesque. Donec tincidunt arcu eu diam tristique, id blandit turpis ornare. Pellentesque fermentum, sem quis consectetur accumsan, libero mi sodales elit, in ullamcorper leo urna et nisi.',
       'Schronisko dla zwierząt w Gdansku',
-      'Pomoc zwierzakom',
+      'Pomoc srodowisku',
       this.formattedDate,
       'JanuszMilosnikZwierzat',
       'Active'

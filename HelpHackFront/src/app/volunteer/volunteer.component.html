@@ -1,11 +1,13 @@
-<h2>Hello 'Name'</h2>
-<h1>Your support matters</h1>
+<div class="root">
+  <h2>Hello 'Name'</h2>
+  <h1>Your support matters</h1>
 
-<div class="row">
-  <div class="col-md-5">
-    <app-ad-list></app-ad-list>
-  </div>
-  <div class="col-md-7">
-    <app-ad-details *ngIf="selectedAd" [ad]="selectedAd"></app-ad-details>
+  <div class="row">
+    <div class="col-md-5">
+      <app-ad-list></app-ad-list>
+    </div>
+    <div class="col-md-7">
+      <app-ad-details *ngIf="selectedAd" [ad]="selectedAd"></app-ad-details>
+    </div>
   </div>
 </div>
