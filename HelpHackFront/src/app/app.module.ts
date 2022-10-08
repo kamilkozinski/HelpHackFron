@@ -11,6 +11,7 @@ import { AdListComponent } from './ad-list/ad-list.component';
 import { AppRoutingModule } from './app-routing,module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { RegistrationService } from './services/registration.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [RegistrationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
