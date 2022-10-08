@@ -8,6 +8,8 @@ import { RegistrationService } from '../services/registration.service';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+  isVolunteer: boolean = true;
+  isNGO: boolean = false;
   checkoutForm = this.formBuilder.group({
     name: '',
     address: '',
@@ -23,5 +25,8 @@ export class RegisterComponent implements OnInit {
     // Process checkout data here
     console.warn('Your order has been submitted', this.checkoutForm.value);
     this.checkoutForm.reset();
+  }
+  onItemChange(event: Event) {
+    this.isVolunteer = !this.isVolunteer;
   }
 }
