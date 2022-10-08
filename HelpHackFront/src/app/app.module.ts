@@ -8,6 +8,9 @@ import { LoginComponent } from './login/login.component';
 import { VolunteerComponent } from './volunteer/volunteer.component';
 import { NgoComponent } from './ngo/ngo.component';
 import { AdListComponent } from './ad-list/ad-list.component';
+import { AppRoutingModule } from './app-routing,module';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,12 @@ import { AdListComponent } from './ad-list/ad-list.component';
     LoginComponent,
     VolunteerComponent,
     NgoComponent,
-    AdListComponent
+    AdListComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
