@@ -1,4 +1,28 @@
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 800px;
+}
+.button {
+  margin: 1%;
+}
+.col-sm-5 {
+  max-width: 100px;
+  margin: 1vw;
+}
+.d-inline-block {
+  max-width: 100px;
+  margin: 1vw;
+}
+.checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+  margin-left: 1vw;
+  margin-top: 0.5vw;
+}
+label {
+  margin-right: 1vw;
+  width: 200px;
 }

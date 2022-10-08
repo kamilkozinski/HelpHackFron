@@ -1,7 +1,12 @@
 .container {
   display: flex;
   justify-content: center;
+  min-height: 800px;
+  width: 100%;
 }
 .btn {
   margin: 2vw;
+}
+.content {
+  margin-top: 20vw;
 }
