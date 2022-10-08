@@ -1,1 +1,13 @@
-<p>login works!</p>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-sm-5 form group">
+      <label for="name"> Name </label>
+      <input id="name" type="text" formControlName="name" />
+    </div>
+    <div class="col-sm-5 form group">
+      <label for="name"> E-mail </label>
+      <input id="name" type="text" formControlName="name" />
+    </div>
+  </div>
+  <button class="button" type="submit">Login</button>
+</form>
