@@ -9,7 +9,7 @@
         [ngModelOptions]="{ standalone: true }"
         [disabled]="isNGO"
       />
-      Register as Volunteer
+      I am Volunteer
     </label>
   </div>
   <div class="checkbox">
@@ -21,10 +21,14 @@
         [(ngModel)]="isNGO"
         [ngModelOptions]="{ standalone: true }"
         [disabled]="isVolunteer"
-      />Register as NGO
+      />I am NGO Employee
     </label>
   </div>
   <div class="row">
+    <div class="col-sm-5 form group">
+      <label for="name"> Name </label>
+      <input id="name" type="text" formControlName="name" />
+    </div>
     <div class="col-sm-5 form group">
       <label for="name"> Name </label>
       <input id="name" type="text" formControlName="name" />
@@ -45,3 +49,42 @@
 
   <button class="button" type="submit">Join us now!</button>
 </form>
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button
+        type="button"
+        class="btn btn-outline-primary"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+      >
+        Toggle dropdown
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem>Action - 1</button>
+        <button ngbDropdownItem>Another Action</button>
+        <button ngbDropdownItem>Something else is here</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Single button -->
+  <div class="btn-group">
+    <button
+      type="button"
+      class="btn btn-default dropdown-toggle"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      Action <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Action</a></li>
+      <li><a href="#">Another action</a></li>
+      <li><a href="#">Something else here</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="#">Separated link</a></li>
+    </ul>
+  </div>
+</div>
