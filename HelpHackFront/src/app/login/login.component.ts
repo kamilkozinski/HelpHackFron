@@ -17,9 +17,7 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder
   ) {}
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 
   onSubmit(): void {
     // Process checkout data here

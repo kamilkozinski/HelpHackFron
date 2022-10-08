@@ -15,6 +15,7 @@ import { RegistrationService } from './services/registration.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './services/login.service';
+import { AdDetailsComponent } from './ad-details/ad-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { LoginService } from './services/login.service';
     AdListComponent,
     HeaderComponent,
     FooterComponent,
+    AdDetailsComponent,
   ],
   imports: [
     BrowserModule,
