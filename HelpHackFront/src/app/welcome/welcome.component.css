@@ -1,7 +1,7 @@
 .container {
   display: flex;
   justify-content: center;
-  min-height: 800px;
+  min-height: 810px;
   width: 100%;
 }
 .btn {

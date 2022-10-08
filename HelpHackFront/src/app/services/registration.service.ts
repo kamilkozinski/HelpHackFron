@@ -6,9 +6,10 @@ import { Observable } from 'rxjs';
 export class RegistrationService {
   constructor(public httpClient: HttpClient) {}
 
-  postRegistration(): Observable<any> {
-    return this.httpClient.get('http://localhost:8080/api/messages/hello', {
-      responseType: 'text',
-    });
+  postRegistration(param: string): Observable<any> {
+    return this.httpClient.post(
+      'https://help-hack-back.azurewebsites.net/api/user/signup',
+      JSON.parse(param)
+    );
   }
 }

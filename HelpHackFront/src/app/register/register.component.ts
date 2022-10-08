@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl } from '@angular/forms';
 import { RegistrationService } from '../services/registration.service';
 
 @Component({
@@ -8,11 +8,30 @@ import { RegistrationService } from '../services/registration.service';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+  ngosList: string[] = ['Comarch', 'Capgemini', 'Test'];
+  toppings = new FormControl('');
+
+  toppingList: string[] = [
+    'Extra cheese',
+    'Mushroom',
+    'Onion',
+    'Pepperoni',
+    'Sausage',
+    'Tomato',
+  ];
+  ngoSelected: string = 'test';
+  regionSelected: string = 'EAST';
   isVolunteer: boolean = true;
+  ngoValue: string;
+  regionValue: string;
   isNGO: boolean = false;
+  selected: string = '';
   checkoutForm = this.formBuilder.group({
-    name: '',
-    address: '',
+    email: '',
+    userName: '',
+    password: '',
+    role: 'USER',
+    region: 'EAST',
   });
   constructor(
     private registrationService: RegistrationService,
@@ -23,10 +42,17 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(): void {
     // Process checkout data here
-    console.warn('Your order has been submitted', this.checkoutForm.value);
+    console.warn('', this.checkoutForm.value);
+    let formObj = this.checkoutForm.getRawValue(); // {name: '', description: ''}
+
+    let serializedForm = JSON.stringify(formObj);
+    console.log(serializedForm);
+    this.registrationService
+      .postRegistration(serializedForm)
+      .subscribe((x) => console.log(x));
     this.checkoutForm.reset();
   }
-  onItemChange(event: Event) {
-    this.isVolunteer = !this.isVolunteer;
+  ngoSelect(str: Event) {
+    this.ngoSelected = (str.target as HTMLInputElement).value;
   }
 }

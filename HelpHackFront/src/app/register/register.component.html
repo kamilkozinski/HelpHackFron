@@ -1,81 +1,75 @@
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
   <div class="container">
     <div class="checkbox">
-      <label>
-        <input
-          #saveUsername
-          type="checkbox"
-          data-toggle="toggle"
-          [(ngModel)]="isVolunteer"
-          [ngModelOptions]="{ standalone: true }"
-          [disabled]="isNGO"
-        />
-        I am Volunteer
-      </label>
-      <label>
-        <input
-          #saveUsername
-          type="checkbox"
-          data-toggle="toggle"
-          [(ngModel)]="isNGO"
-          [ngModelOptions]="{ standalone: true }"
-          [disabled]="isVolunteer"
-        />I am NGO Employee
-      </label>
-    </div>
-
-    <div
-      class="d-inline-block"
-      ngbDropdown
-      #myDrop="ngbDropdown"
-      *ngIf="isVolunteer"
-    >
-      <button
-        type="button"
-        class="btn btn-outline-primary me-2"
-        id="dropdownManual"
-        ngbDropdownAnchor
-        (focus)="myDrop.open()"
-      >
-        Select Region
-      </button>
-      <div ngbDropdownMenu aria-labelledby="dropdownManual">
-        <button ngbDropdownItem>Nowa Huta</button>
-        <button ngbDropdownItem>Białystok</button>
+      <div class="col-sm-5 form group">
+        <label class="label">
+          <input
+            #saveUsername
+            type="checkbox"
+            data-toggle="toggle"
+            [(ngModel)]="isVolunteer"
+            [ngModelOptions]="{ standalone: true }"
+            [disabled]="isNGO"
+          />
+          I am Volunteer
+        </label>
+        <label class="label">
+          <input
+            #saveUsername
+            type="checkbox"
+            data-toggle="toggle"
+            [(ngModel)]="isNGO"
+            [ngModelOptions]="{ standalone: true }"
+            [disabled]="isVolunteer"
+          />I am NGO Employee
+        </label>
       </div>
     </div>
-
-    <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown" *ngIf="isNGO">
-      <button
-        type="button"
-        class="btn btn-outline-primary me-2"
-        id="dropdownManual"
-        ngbDropdownAnchor
-        (focus)="myDrop.open()"
-      >
-        Select NGO
-      </button>
-      <div ngbDropdownMenu aria-labelledby="dropdownManual">
-        <button ngbDropdownItem>Capgemini</button>
-        <button ngbDropdownItem>Comarch</button>
-      </div>
+    <div class="col-sm-5 form group">
+      <mat-form-field appearance="fill" *ngIf="isVolunteer">
+        <mat-label>Select an option</mat-label>
+        <mat-select [(value)]="regionSelected">
+          <mat-option>None</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-5 form group">
+      <mat-form-field appearance="fill" *ngIf="isNGO">
+        <mat-label>Select an option</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option>None</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-5 form group">
+      <label for="email"> E-mail <span class="red-star">*</span> </label>
+      <input id="email" type="text" formControlName="email" required />
+    </div>
+    <div class="col-sm-5 form group">
+      <label for="userName"> Name <span class="red-star">*</span></label>
+      <input id="userName" type="text" formControlName="userName" required />
     </div>
 
     <div class="col-sm-5 form group">
-      <label for="name"> Name </label>
-      <input id="name" type="text" formControlName="name" />
+      <label for="password"> Password <span class="red-star">*</span> </label>
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        required
+      />
     </div>
     <div class="col-sm-5 form group">
-      <label for="name"> E-mail </label>
-      <input id="name" type="text" formControlName="name" />
-    </div>
-    <div class="col-sm-5 form group">
-      <label for="name"> Password </label>
-      <input id="name" type="text" formControlName="name" />
-    </div>
-    <div class="col-sm-5 form group">
-      <label for="name"> Repeat Password </label>
-      <input id="name" type="text" formControlName="name" />
+      <label for="name">
+        Repeat Password <span class="red-star">*</span>
+      </label>
+      <input id="name" type="password" formControlName="name" required />
     </div>
 
     <button class="btn btn-primary btn-lg" type="submit">Join us now!</button>

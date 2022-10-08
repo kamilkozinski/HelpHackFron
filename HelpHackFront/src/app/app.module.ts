@@ -21,6 +21,7 @@ import { DemoModalServiceStaticComponent } from './modals/registetered.modal';
 import { AdItemComponent } from './ad-item/ad-item.component';
 import { AdvertService } from './services/adverts.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     BrowserAnimationsModule,
     NgbModule,
+    MatSelectModule,
   ],
   providers: [RegistrationService, LoginService, AdvertService],
   bootstrap: [AppComponent],

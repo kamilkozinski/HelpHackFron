@@ -1,11 +1,14 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  min-height: 800px;
+  justify-content: center;
+  min-height: 820px;
+  margin-top: 5vw;
+  max-width: 400px;
+  border-style: solid;
 }
-.button {
-  margin: 1%;
+.btn-lg {
+  margin-top: 4vw;
 }
 .col-sm-5 {
   max-width: 100px;
@@ -24,5 +27,15 @@
 }
 label {
   margin-right: 1vw;
+  margin-bottom: 1vw;
   width: 200px;
+}
+.mat-form-field {
+  max-width: 200px;
+}
+.btn {
+  max-width: 200px;
+}
+.red-star {
+  color: red;
 }

@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+  margin-left: 1vw;
+  margin-top: 0.5vw;
+  min-height: 820px;
+}
+
+.col-sm-5 {
+  max-width: 200px;
+  margin: 1vw;
+}
+.btn-lg {
+  margin-top: 2vw;
+  margin-left: 1vw;
+}

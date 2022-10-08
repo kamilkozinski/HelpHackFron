@@ -6,10 +6,8 @@
   height: 50px;
   background-color: beige;
 }
-
-footer {
-  background: #42a5f5;
-  color: white;
-  line-height: 50px;
-  padding: 0 20px;
+.name {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #cc0000;
+  font-style: italic;
 }
