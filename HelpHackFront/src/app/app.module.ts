@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { DemoModalServiceStaticComponent } from './modals/registetered.modal';
 import { AdItemComponent } from './ad-item/ad-item.component';
+import { AdvertService } from './services/adverts.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,13 @@ import { AdItemComponent } from './ad-item/ad-item.component';
     HttpClientModule,
     BrowserAnimationsModule,
   ],
-  providers: [RegistrationService, LoginService, BsModalService, BsModalRef],
+  providers: [
+    RegistrationService,
+    LoginService,
+    BsModalService,
+    BsModalRef,
+    AdvertService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
