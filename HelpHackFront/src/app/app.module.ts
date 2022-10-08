@@ -8,11 +8,12 @@ import { LoginComponent } from './login/login.component';
 import { VolunteerComponent } from './volunteer/volunteer.component';
 import { NgoComponent } from './ngo/ngo.component';
 import { AdListComponent } from './ad-list/ad-list.component';
-import { AppRoutingModule } from './app-routing,module';
+import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RegistrationService } from './services/registration.service';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,13 @@ import { RegistrationService } from './services/registration.service';
     HeaderComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [RegistrationService],
   bootstrap: [AppComponent],
 })
