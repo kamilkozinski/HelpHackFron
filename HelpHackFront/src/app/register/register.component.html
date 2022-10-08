@@ -26,24 +26,25 @@
       </div>
     </div>
     <div class="col-sm-5 form group">
-      <mat-form-field appearance="fill" *ngIf="isVolunteer">
-        <mat-label>Select an option</mat-label>
+      <mat-form-field appearance="fill" *ngIf="isNGO">
+        <mat-label>Select NGO</mat-label>
         <mat-select [(value)]="regionSelected">
           <mat-option>None</mat-option>
-          <mat-option value="option1">Option 1</mat-option>
-          <mat-option value="option2">Option 2</mat-option>
-          <mat-option value="option3">Option 3</mat-option>
+          <mat-option value="option1">ElaBela</mat-option>
+          <mat-option value="option2">Schronisko Zabrze</mat-option>
+          <mat-option value="option3">Capgemini</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
     <div class="col-sm-5 form group">
-      <mat-form-field appearance="fill" *ngIf="isNGO">
-        <mat-label>Select an option</mat-label>
+      <mat-form-field appearance="fill" *ngIf="isVolunteer">
+        <mat-label>Select region</mat-label>
         <mat-select [(value)]="selected">
           <mat-option>None</mat-option>
-          <mat-option value="option1">Option 1</mat-option>
-          <mat-option value="option2">Option 2</mat-option>
-          <mat-option value="option3">Option 3</mat-option>
+          <mat-option value="option1">EAST</mat-option>
+          <mat-option value="option2">WEST</mat-option>
+          <mat-option value="option3">NORTH</mat-option>
+          <mat-option value="option3">SOUTH</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
@@ -72,6 +73,12 @@
       <input id="name" type="password" formControlName="name" required />
     </div>
 
-    <button class="btn btn-primary btn-lg" type="submit">Join us now!</button>
+    <button
+      class="btn btn-primary btn-lg"
+      type="submit"
+      routerLink="/registered"
+    >
+      Join us now!
+    </button>
   </div>
 </form>

@@ -22,6 +22,9 @@ import { AdItemComponent } from './ad-item/ad-item.component';
 import { AdvertService } from './services/adverts.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatSelectModule } from '@angular/material/select';
+import { SuccessfulComponent } from './successful/successful.component';
+import { NgoListComponent } from './ngo-list/ngo-list.component';
+import { AdDetailsNgoComponent } from './ad-details-ngo/ad-details-ngo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +38,9 @@ import { MatSelectModule } from '@angular/material/select';
     FooterComponent,
     AdDetailsComponent,
     AdItemComponent,
+    SuccessfulComponent,
+    NgoListComponent,
+    AdDetailsNgoComponent,
   ],
   imports: [
     BrowserModule,

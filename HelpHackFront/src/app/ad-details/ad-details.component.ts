@@ -8,7 +8,11 @@ import { Advert } from '../models/advert.model';
 })
 export class AdDetailsComponent implements OnInit {
   @Input() ad: Advert;
+  isDisabled: boolean = false;
   constructor() {}
 
   ngOnInit(): void {}
+  onClick() {
+    this.isDisabled = true;
+  }
 }

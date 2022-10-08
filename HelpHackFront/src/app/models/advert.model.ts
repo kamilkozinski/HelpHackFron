@@ -8,6 +8,7 @@ export class Advert {
   public description: string;
   public actionDate: string;
   public createdBy: string;
+  public region: string;
   public status: string;
   // public createdBy: string;
 
@@ -17,12 +18,14 @@ export class Advert {
     actionName: string,
     actionDate: string,
     createdBy: string,
+    region: string,
     status: string
   ) {
     (this.description = description),
       (this.NGO = NGO),
       (this.actionName = actionName),
       (this.actionDate = actionDate),
+      (this.region = region),
       (this.createdBy = createdBy),
       (this.status = status);
   }

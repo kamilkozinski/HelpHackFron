@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { NgoComponent } from './ngo/ngo.component';
 import { RegisterComponent } from './register/register.component';
+import { SuccessfulComponent } from './successful/successful.component';
 import { VolunteerComponent } from './volunteer/volunteer.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
@@ -13,6 +14,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'volunteer-dashboard', component: VolunteerComponent },
   { path: 'ngo-dashboard', component: NgoComponent },
+  { path: 'registered', component: SuccessfulComponent },
 ];
 
 @NgModule({

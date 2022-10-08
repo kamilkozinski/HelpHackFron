@@ -13,3 +13,13 @@
     <div>{{ ad.description }}</div>
   </div>
 </div>
+<div class="row">
+  <button
+    type="button"
+    class="btn btn-success"
+    (click)="onClick()"
+    [disabled]="isDisabled"
+  >
+    Commit
+  </button>
+</div>
