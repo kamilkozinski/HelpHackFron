@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 780px;
+  max-width: 400px;
+  border-style: solid;
+}
+.btn-lg {
+  margin-top: 4vw;
+}
+.col-sm-5 {
+  max-width: 100px;
+  margin: 0.5vw;
+  margin-left: 5vw;
+}
+.d-inline-block {
+  max-width: 100px;
+  margin: 0.5vw;
+}
+label {
+  margin-right: 1vw;
+  margin-bottom: 0.25vw;
+  width: 200px;
+}
+.mat-form-field {
+  max-width: 200px;
+}
+.btn {
+  max-width: 200px;
+  margin-left: 6vw;
+  margin-bottom: 2vw;
+}

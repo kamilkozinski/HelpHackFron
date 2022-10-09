@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { RegistrationService } from '../services/registration.service';
 
 @Component({
@@ -35,7 +36,8 @@ export class RegisterComponent implements OnInit {
   });
   constructor(
     private registrationService: RegistrationService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -50,6 +52,7 @@ export class RegisterComponent implements OnInit {
     this.registrationService
       .postRegistration(serializedForm)
       .subscribe((x) => console.log(x));
+    this.router.navigate(['registered']);
     this.checkoutForm.reset();
   }
   ngoSelect(str: Event) {

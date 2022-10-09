@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+  justify-content: center;
+  min-height: 780px;
+  font-size: 4vw;
+  margin-right: 2vw;
+}

@@ -9,3 +9,7 @@
 .btn {
   margin-right: 5vw;
 }
+.root {
+  min-height: 760px;
+  margin-left: 1vw;
+}
