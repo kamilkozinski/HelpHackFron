@@ -1,0 +1,40 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+  <div class="container">
+    <div class="col-sm-5 form group">
+      <label for="email"> Event Name </label>
+      <input id="email" type="text" formControlName="email" required />
+    </div>
+    <div class="col-sm-5 form group">
+      <label for="regionName">Region Name </label>
+      <input
+        id="regionName"
+        type="text"
+        formControlName="regionName"
+        required
+      />
+    </div>
+    <div class="col-sm-5 form group">
+      <label for="eventDescription"> Event Description </label>
+      <input
+        id="eventDescription"
+        type="text"
+        formControlName="eventDescription"
+        required
+      />
+    </div>
+    <div class="col-sm-5 form group">
+      <label for="eventDate"> Name </label>
+      <input id="eventDate" type="text" formControlName="eventDate" required />
+    </div>
+
+    <div class="col-sm-5 form group">
+      <label for="createdDate"> Name </label>
+      <input
+        id="createdDate"
+        type="text"
+        formControlName="createdDate"
+        required
+      />
+    </div>
+  </div>
+</form>

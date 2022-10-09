@@ -27,6 +27,8 @@ import { NgoListComponent } from './ngo-list/ngo-list.component';
 import { AdDetailsNgoComponent } from './ad-details-ngo/ad-details-ngo.component';
 import { AdItemNgoComponent } from './ad-item-ngo/ad-item-ngo.component';
 import { LocalStorageService } from './services/localStorage.service';
+import { AddActionComponent } from './add-action/add-action.component';
+import { AddAdvertService } from './services/add-advert.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +46,7 @@ import { LocalStorageService } from './services/localStorage.service';
     NgoListComponent,
     AdDetailsNgoComponent,
     AdItemNgoComponent,
+    AddActionComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,7 @@ import { LocalStorageService } from './services/localStorage.service';
     LoginService,
     AdvertService,
     LocalStorageService,
+    AddAdvertService,
   ],
   bootstrap: [AppComponent],
 })
