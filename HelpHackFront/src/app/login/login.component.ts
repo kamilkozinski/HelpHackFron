@@ -10,6 +10,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  authToken: string;
+  role: string;
+  b;
   checkoutForm = this.formBuilder.group({
     userName: '',
     password: '',
@@ -32,8 +35,16 @@ export class LoginComponent implements OnInit {
     console.log(serializedForm);
     this.loginService
       .postLogin(serializedForm)
-      .subscribe((x) => this.localStorageService.setItem('JWT', x));
-    this.router.navigate(['volunteer-dashboard']);
+      .subscribe((x) => (this.authToken = x));
+    this.localStorageService.setItem('JWT', this.authToken);
+
+    this.role = atob(this.authToken);
+    this.b = JSON.parse(this.role);
+    if (this.b['role'] == 'ADMIN') {
+      this.router.navigate(['ngo-dashboard']);
+    } else {
+      this.router.navigate(['volunteer-dashboard']);
+    }
     this.checkoutForm.reset();
   }
 }
