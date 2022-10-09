@@ -8,7 +8,7 @@ export class AddAdvertService {
 
   postAdvert(param: string): Observable<any> {
     return this.httpClient.post(
-      'https://help-hack-back.azurewebsites.net/login',
+      'https://help-hack-back.azurewebsites.net/api/events/create',
       JSON.parse(param),
       {
         responseType: 'text',

@@ -1,11 +1,13 @@
 <div class="container">
   <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
     <div class="col-sm-5 form group">
-      <label for="email"> Event Name </label>
-      <input id="email" type="text" formControlName="email" required />
+      <label for="eventName"> Event Name <span class="red-star">*</span></label>
+      <input id="eventName" type="text" formControlName="eventName" required />
     </div>
     <div class="col-sm-5 form group">
-      <label for="regionName">Region Name </label>
+      <label for="regionName"
+        >Region Name <span class="red-star">*</span></label
+      >
       <input
         id="regionName"
         type="text"
@@ -14,7 +16,9 @@
       />
     </div>
     <div class="col-sm-5 form group">
-      <label for="eventDescription"> Event Description </label>
+      <label for="eventDescription">
+        Event Description <span class="red-star">*</span></label
+      >
       <input
         id="eventDescription"
         type="text"
@@ -23,18 +27,15 @@
       />
     </div>
     <div class="col-sm-5 form group">
-      <label for="eventDate"> Name </label>
-      <input id="eventDate" type="text" formControlName="eventDate" required />
+      <label for="volAmount">
+        Number of volunteers <span class="red-star">*</span></label
+      >
+      <input id="volAmount" type="text" formControlName="volAmount" required />
     </div>
 
     <div class="col-sm-5 form group">
-      <label for="createdDate"> Name </label>
-      <input
-        id="createdDate"
-        type="text"
-        formControlName="createdDate"
-        required
-      />
+      <label for="eventDate"> Event Date <span class="red-star">*</span></label>
+      <input id="eventDate" type="text" formControlName="eventDate" required />
     </div>
     <button class="btn btn-primary btn-lg" type="submit">Add Action</button>
   </form>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AddAdvertService } from '../services/add-advert.service';
 
 @Component({
@@ -12,12 +13,12 @@ export class AddActionComponent implements OnInit {
     eventName: '',
     regionName: '',
     eventDescription: '',
-    eventDate: 'USER',
-    createdDate: 'EAST',
+    eventDate: '12-10-2022',
   });
   constructor(
     private formBuilder: FormBuilder,
-    private addAdvertService: AddAdvertService
+    private addAdvertService: AddAdvertService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -25,11 +26,12 @@ export class AddActionComponent implements OnInit {
   onSubmit(): void {
     // Process checkout data here
     console.warn('Your order has been submitted', this.checkoutForm.value);
-    let formObj = this.checkoutForm.getRawValue(); // {name: '', description: ''}
+    let formObj = this.checkoutForm.getRawValue();
 
     let serializedForm = JSON.stringify(formObj);
     console.log(serializedForm);
     this.addAdvertService.postAdvert(serializedForm);
+    this.router.navigate(['ngo-dashboard']);
     this.checkoutForm.reset();
   }
 }

@@ -12,14 +12,6 @@ export class RegisterComponent implements OnInit {
   ngosList: string[] = ['Comarch', 'Capgemini', 'Test'];
   toppings = new FormControl('');
 
-  toppingList: string[] = [
-    'Extra cheese',
-    'Mushroom',
-    'Onion',
-    'Pepperoni',
-    'Sausage',
-    'Tomato',
-  ];
   ngoSelected: string = 'test';
   regionSelected: string = 'EAST';
   isVolunteer: boolean = true;
