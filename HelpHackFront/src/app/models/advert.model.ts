@@ -1,8 +1,5 @@
 export class Advert {
   public actionId: string;
-  // actionType: string;
-  // actionDate: string;
-  // workingHours: number;
   public NGO: string;
   public actionName: string;
   public description: string;
@@ -10,8 +7,9 @@ export class Advert {
   public createdBy: string;
   public region: string;
   public status: string;
-  // public createdBy: string;
-
+  public workingHours?: number;
+  public volunteersRequired?: number;
+  public volunteersCommited?: number;
   constructor(
     description: string,
     NGO: string,
@@ -19,7 +17,10 @@ export class Advert {
     actionDate: string,
     createdBy: string,
     region: string,
-    status: string
+    status: string,
+    workingHours: number,
+    volunteersRequired: number,
+    volunteersCommited: number
   ) {
     (this.description = description),
       (this.NGO = NGO),
@@ -27,6 +28,9 @@ export class Advert {
       (this.actionDate = actionDate),
       (this.region = region),
       (this.createdBy = createdBy),
-      (this.status = status);
+      (this.status = status),
+      (this.workingHours = workingHours),
+      (this.volunteersRequired = volunteersRequired),
+      (this.volunteersCommited = volunteersCommited);
   }
 }

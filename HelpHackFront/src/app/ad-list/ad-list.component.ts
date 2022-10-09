@@ -13,6 +13,6 @@ export class AdListComponent implements OnInit {
   constructor(private advertService: AdvertService) {}
 
   ngOnInit(): void {
-    this.adverts = this.advertService.getAds();
+    this.adverts = this.advertService.getAdsForVolunteer();
   }
 }

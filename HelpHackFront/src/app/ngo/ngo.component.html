@@ -6,7 +6,10 @@
       <app-ad-list></app-ad-list>
     </div>
     <div class="col-md-7">
-      <app-ad-details *ngIf="selectedAd" [ad]="selectedAd"></app-ad-details>
+      <app-ad-details-ngo
+        *ngIf="selectedAd"
+        [ad]="selectedAd"
+      ></app-ad-details-ngo>
     </div>
   </div>
 </div>
