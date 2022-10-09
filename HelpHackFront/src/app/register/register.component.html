@@ -28,7 +28,7 @@
     <div class="col-sm-5 form group">
       <mat-form-field appearance="fill" *ngIf="isNGO">
         <mat-label>Select NGO</mat-label>
-        <mat-select [(value)]="regionSelected">
+        <mat-select>
           <mat-option>None</mat-option>
           <mat-option value="option1">ElaBela</mat-option>
           <mat-option value="option2">Schronisko Zabrze</mat-option>
@@ -39,7 +39,7 @@
     <div class="col-sm-5 form group">
       <mat-form-field appearance="fill" *ngIf="isVolunteer">
         <mat-label>Select region</mat-label>
-        <mat-select [(value)]="selected">
+        <mat-select>
           <mat-option>None</mat-option>
           <mat-option value="option1">EAST</mat-option>
           <mat-option value="option2">WEST</mat-option>
@@ -73,12 +73,6 @@
       <input id="name" type="password" formControlName="name" required />
     </div>
 
-    <button
-      class="btn btn-primary btn-lg"
-      type="submit"
-      routerLink="/registered"
-    >
-      Join us now!
-    </button>
+    <button class="btn btn-primary btn-lg" type="submit">Join us now!</button>
   </div>
 </form>

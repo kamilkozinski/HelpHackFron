@@ -2,22 +2,16 @@
   <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
     <div class="row">
       <div class="col-sm-5 form group">
-        <label for="name"> Name </label>
-        <input id="name" type="text" formControlName="name" />
+        <label for="userName"> Name </label>
+        <input id="userName" type="text" formControlName="userName" />
       </div>
       <div class="col-sm-5 form group">
-        <label for="name"> E-mail </label>
-        <input id="name" type="text" formControlName="name" />
+        <label for="password"> Password </label>
+        <input id="password" type="text" formControlName="password" />
       </div>
     </div>
     <div class="button">
-      <button
-        class="btn btn-primary btn-lg"
-        type="submit"
-        routerLink="/volunteer-dashboard"
-      >
-        Login
-      </button>
+      <button class="btn btn-primary btn-lg" type="submit">Login</button>
     </div>
   </form>
 </div>

@@ -1,0 +1,28 @@
+<div
+  style="cursor: pointer"
+  class="list-group-item clearfix"
+  (click)="onSelected()"
+>
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">
+      {{ ad.actionName }} for {{ ad.NGO }}
+    </h4>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <p>
+        Event date: {{ ad.actionDate }} &nbsp; Created by
+        {{ ad.createdBy }} &nbsp; Status: {{ ad.status }} &nbsp; Region:
+        {{ ad.region }} &nbsp;
+        <span class="required"
+          >Volunteers required: {{ ad.volunteersRequired }}</span
+        >
+        &nbsp;
+
+        <span class="committed">
+          Volunteers commited: {{ ad.volunteersCommited }}
+        </span>
+      </p>
+    </div>
+  </div>
+</div>

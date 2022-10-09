@@ -25,6 +25,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { SuccessfulComponent } from './successful/successful.component';
 import { NgoListComponent } from './ngo-list/ngo-list.component';
 import { AdDetailsNgoComponent } from './ad-details-ngo/ad-details-ngo.component';
+import { AdItemNgoComponent } from './ad-item-ngo/ad-item-ngo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +42,7 @@ import { AdDetailsNgoComponent } from './ad-details-ngo/ad-details-ngo.component
     SuccessfulComponent,
     NgoListComponent,
     AdDetailsNgoComponent,
+    AdItemNgoComponent,
   ],
   imports: [
     BrowserModule,

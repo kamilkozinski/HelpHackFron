@@ -1,0 +1,15 @@
+.col-xs-12 {
+  margin-top: 2%;
+}
+.list-group-item {
+  background-color: aliceblue;
+  margin-bottom: 0.5vw;
+  padding: 0.5vw;
+  border-radius: 5%;
+}
+.required {
+  color: red;
+}
+.committed {
+  color: lightgreen;
+}

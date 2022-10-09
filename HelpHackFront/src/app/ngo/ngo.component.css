@@ -1,0 +1,11 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+.head-text {
+  font-weight: bold;
+  font-size: larger;
+}
+.btn {
+  margin-right: 5vw;
+}

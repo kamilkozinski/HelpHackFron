@@ -9,11 +9,11 @@ import { LoginService } from '../services/login.service';
 })
 export class LoginComponent implements OnInit {
   checkoutForm = this.formBuilder.group({
-    name: '',
-    address: '',
+    userName: '',
+    password: '',
   });
   constructor(
-    private registrationService: LoginService,
+    private loginService: LoginService,
     private formBuilder: FormBuilder
   ) {}
 
@@ -22,6 +22,13 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     // Process checkout data here
     console.warn('Your order has been submitted', this.checkoutForm.value);
+    let formObj = this.checkoutForm.getRawValue(); // {name: '', description: ''}
+
+    let serializedForm = JSON.stringify(formObj);
+    console.log(serializedForm);
+    this.loginService
+      .postLogin(serializedForm)
+      .subscribe((x) => console.log(x));
     this.checkoutForm.reset();
   }
 }
