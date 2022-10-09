@@ -26,6 +26,7 @@ import { SuccessfulComponent } from './successful/successful.component';
 import { NgoListComponent } from './ngo-list/ngo-list.component';
 import { AdDetailsNgoComponent } from './ad-details-ngo/ad-details-ngo.component';
 import { AdItemNgoComponent } from './ad-item-ngo/ad-item-ngo.component';
+import { LocalStorageService } from './services/localStorage.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +55,12 @@ import { AdItemNgoComponent } from './ad-item-ngo/ad-item-ngo.component';
     NgbModule,
     MatSelectModule,
   ],
-  providers: [RegistrationService, LoginService, AdvertService],
+  providers: [
+    RegistrationService,
+    LoginService,
+    AdvertService,
+    LocalStorageService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

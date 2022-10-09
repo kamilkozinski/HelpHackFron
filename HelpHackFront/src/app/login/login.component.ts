@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { LocalStorageService } from '../services/localStorage.service';
 import { LoginService } from '../services/login.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
   });
   constructor(
     private loginService: LoginService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private localStorageService: LocalStorageService
   ) {}
 
   ngOnInit(): void {}
@@ -28,7 +30,7 @@ export class LoginComponent implements OnInit {
     console.log(serializedForm);
     this.loginService
       .postLogin(serializedForm)
-      .subscribe((x) => console.log(x));
+      .subscribe((x) => this.localStorageService.setItem('JWT', x));
     this.checkoutForm.reset();
   }
 }
